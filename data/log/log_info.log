@@ -1,0 +1,15 @@
+24-06-15.12:11:29.535 [main            ] INFO  Application            - Starting Application using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 4088 (D:\idea\program\Marketing\Marketing-app\target\classes started by Thinkpad in D:\idea\program\Marketing)
+24-06-15.12:11:29.541 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-06-15.12:11:31.229 [main            ] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[org.example]' package. Please check your configuration.
+24-06-15.12:11:32.167 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-06-15.12:11:32.183 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-06-15.12:11:32.184 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-06-15.12:11:32.184 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-06-15.12:11:32.553 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-06-15.12:11:32.553 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2894 ms
+24-06-15.12:11:33.733 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+24-06-15.12:11:33.858 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+24-06-15.12:11:33.882 [main            ] INFO  Application            - Started Application in 5.791 seconds (JVM running for 8.548)
+24-06-15.12:12:47.196 [http-nio-8091-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-06-15.12:12:47.196 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-06-15.12:12:47.197 [http-nio-8091-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
