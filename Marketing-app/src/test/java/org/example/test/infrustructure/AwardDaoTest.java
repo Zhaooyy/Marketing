@@ -21,10 +21,14 @@ public class AwardDaoTest {
     @Resource
     private IAwardDao awardDao;
 
+
+    List<Award> awards;
+
     @Test
     public void test_queryAwardList(){
-        List<Award> awardList = awardDao.queryAwardList();
-        log.info("测试结果{}", JSON.toJSONString(awardList));
+        System.out.println(awards.getClass());
+        //List<Award> awardList = awardDao.queryAwardList();
+        //log.info("测试结果{}", JSON.toJSONString(awardList));
 
     }
 }

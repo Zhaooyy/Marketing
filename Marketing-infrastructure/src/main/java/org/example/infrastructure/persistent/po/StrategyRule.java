@@ -20,7 +20,7 @@ public class StrategyRule {
     /** 抽象规则类型 */
     private Integer ruleType;
     /** 抽奖规则模型 */
-    private String ruleModels;
+    private String ruleModel;
     /** 抽奖规则比值 */
     private String ruleValue;
     /** 抽奖规则描述 */
