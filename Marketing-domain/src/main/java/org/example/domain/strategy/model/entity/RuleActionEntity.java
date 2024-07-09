@@ -53,4 +53,6 @@ public class RuleActionEntity<T extends RuleActionEntity.RaffleEntity> {
     }
 
 
+    static public class RaffleCenterEntity extends RaffleEntity {
+    }
 }

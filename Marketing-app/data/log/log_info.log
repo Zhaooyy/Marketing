@@ -1,154 +1,202 @@
-24-07-07.17:19:24.068 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 20420 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-07.17:19:24.070 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-07.17:19:28.171 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-07.17:19:28.182 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-07.17:19:28.299 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 0 Redis repository interfaces.
-24-07-07.17:19:32.931 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-07.17:19:45.529 [main            ] WARN  GenericWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyArmoryDispatch': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [org/example/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
-24-07-07.17:19:45.586 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-24-07-07.17:19:45.678 [main            ] ERROR SpringApplication      - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyArmoryDispatch': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [org/example/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:136)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [org/example/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
-	... 43 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [org/example/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
-	... 59 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [org/example/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
-	... 75 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
-	... 91 common frames omitted
-Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
-	at org.redisson.connection.pool.ConnectionPool.lambda$createConnection$0(ConnectionPool.java:132)
-	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
-	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750)
-	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
-	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
-	at org.redisson.connection.pool.ConnectionPool.promiseFailure(ConnectionPool.java:294)
-	at org.redisson.connection.pool.ConnectionPool.lambda$createConnection$6(ConnectionPool.java:253)
-	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
-	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750)
-	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
-	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
-	at org.redisson.client.RedisClient$1$2.run(RedisClient.java:257)
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
-	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
-	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.util.concurrent.CompletionException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: 127.0.0.1/127.0.0.1:6379
-	at java.util.concurrent.CompletableFuture.encodeRelay(CompletableFuture.java:326)
-	at java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:338)
-	at java.util.concurrent.CompletableFuture.uniRelay(CompletableFuture.java:925)
-	at java.util.concurrent.CompletableFuture$UniRelay.tryFire(CompletableFuture.java:913)
-	... 11 common frames omitted
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: 127.0.0.1/127.0.0.1:6379
-Caused by: java.net.ConnectException: Connection refused: no further information
-	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
-	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+24-07-09.17:22:48.767 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 21496 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
+24-07-09.17:22:48.770 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-07-09.17:22:51.743 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-09.17:22:51.752 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-09.17:22:51.844 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 0 Redis repository interfaces.
+24-07-09.17:22:57.139 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-09.17:22:58.629 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:22:58.717 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:23:05.461 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-09.17:23:05.748 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 18.407 seconds (JVM running for 23.137)
+24-07-09.17:23:07.829 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-09.17:23:10.281 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-09.17:23:10.490 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:23:11.157 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-09.17:23:11.211 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-09.17:25:51.335 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 7776 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
+24-07-09.17:25:51.364 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-07-09.17:25:55.224 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-09.17:25:55.237 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-09.17:25:55.378 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 0 Redis repository interfaces.
+24-07-09.17:26:02.287 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-09.17:26:04.232 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:26:04.279 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:26:13.423 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-09.17:26:13.748 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 24.233 seconds (JVM running for 30.437)
+24-07-09.17:29:00.692 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-09.17:29:11.932 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 20664 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
+24-07-09.17:29:11.937 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-07-09.17:29:14.754 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-09.17:29:14.767 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-09.17:29:14.895 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 0 Redis repository interfaces.
+24-07-09.17:29:19.800 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-09.17:29:21.420 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:29:21.481 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:29:28.094 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-09.17:29:28.298 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 17.825 seconds (JVM running for 22.07)
+24-07-09.17:30:49.984 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-09.17:30:59.699 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 21652 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
+24-07-09.17:30:59.702 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-07-09.17:31:03.292 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-09.17:31:03.303 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-09.17:31:03.436 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77 ms. Found 0 Redis repository interfaces.
+24-07-09.17:31:08.441 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-09.17:31:09.638 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:31:09.666 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:31:15.190 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-09.17:31:15.417 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 17.271 seconds (JVM running for 21.471)
+24-07-09.17:33:13.857 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-09.17:35:26.254 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 21364 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
+24-07-09.17:35:26.257 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-07-09.17:35:28.558 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-09.17:35:28.569 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-09.17:35:28.651 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
+24-07-09.17:35:35.173 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-09.17:35:37.319 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:35:37.358 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:35:47.313 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-09.17:35:47.659 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 22.635 seconds (JVM running for 25.647)
+24-07-09.17:35:49.596 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-09.17:35:51.603 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-09.17:35:51.764 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:35:51.775 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:35:51.852 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:35:52.246 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-09.17:35:52.295 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-09.17:36:13.772 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 13976 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
+24-07-09.17:36:13.775 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-07-09.17:36:17.292 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-09.17:36:17.303 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-09.17:36:17.426 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 0 Redis repository interfaces.
+24-07-09.17:36:23.181 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-09.17:36:24.985 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:36:25.102 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:36:33.113 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-09.17:36:33.379 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 21.457 seconds (JVM running for 25.946)
+24-07-09.17:36:35.445 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-09.17:36:37.771 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-09.17:36:37.925 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:36:37.941 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:36:37.952 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:37:18.553 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-09.17:37:18.582 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-09.17:37:29.475 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 16396 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
+24-07-09.17:37:29.477 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-07-09.17:37:32.223 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-09.17:37:32.236 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-09.17:37:32.336 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 0 Redis repository interfaces.
+24-07-09.17:37:37.116 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-09.17:37:38.841 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:37:38.876 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:37:45.354 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-09.17:37:45.560 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 17.467 seconds (JVM running for 21.514)
+24-07-09.17:37:46.734 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-09.17:37:48.090 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-09.17:37:48.193 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:37:48.200 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:37:48.207 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:42:30.241 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m42s30ms790µs400ns).
+24-07-09.17:42:30.411 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-09.17:42:30.451 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-09.17:42:41.156 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 12672 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
+24-07-09.17:42:41.175 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-07-09.17:42:43.933 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-09.17:42:43.945 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-09.17:42:44.078 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 0 Redis repository interfaces.
+24-07-09.17:42:48.014 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-09.17:42:49.189 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:42:49.213 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:42:54.640 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-09.17:42:54.885 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 15.253 seconds (JVM running for 19.19)
+24-07-09.17:42:56.386 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-09.17:42:58.320 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-09.17:42:58.464 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:42:58.474 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:42:58.482 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:44:47.533 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m49s110ms446µs).
+24-07-09.17:44:47.746 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-09.17:44:47.764 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-09.17:44:57.221 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 21180 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
+24-07-09.17:44:57.224 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-07-09.17:45:00.236 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-09.17:45:00.253 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-09.17:45:00.372 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 0 Redis repository interfaces.
+24-07-09.17:45:04.762 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-09.17:45:05.855 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:45:05.885 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:45:10.900 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-09.17:45:11.169 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 15.37 seconds (JVM running for 19.099)
+24-07-09.17:45:12.250 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-09.17:45:13.741 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-09.17:45:13.881 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:45:13.894 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:45:13.903 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.17:45:14.106 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-09.17:45:14.140 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-09.17:45:47.809 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 12884 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
+24-07-09.17:45:47.810 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-07-09.17:45:50.283 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-09.17:45:50.295 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-09.17:45:50.400 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 0 Redis repository interfaces.
+24-07-09.17:45:55.231 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-09.17:45:56.795 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:45:56.839 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:46:03.828 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-09.17:46:04.085 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 17.436 seconds (JVM running for 20.745)
+24-07-09.17:47:09.870 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-09.17:47:19.752 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 20336 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
+24-07-09.17:47:19.756 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-07-09.17:47:22.498 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-09.17:47:22.509 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-09.17:47:22.608 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 0 Redis repository interfaces.
+24-07-09.17:47:26.859 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-09.17:47:28.015 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:47:28.042 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.17:47:33.387 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-09.17:47:33.678 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 15.504 seconds (JVM running for 19.515)
+24-07-09.21:26:38.218 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-09.21:26:56.246 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 7316 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
+24-07-09.21:26:56.252 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-07-09.21:27:01.267 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-09.21:27:01.284 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-09.21:27:01.454 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 91 ms. Found 0 Redis repository interfaces.
+24-07-09.21:27:08.633 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-09.21:27:09.996 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.21:27:10.034 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.21:34:00.733 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-09.21:34:00.979 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 427.587 seconds (JVM running for 436.475)
+24-07-09.21:34:57.391 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 19360 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
+24-07-09.21:34:57.394 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-07-09.21:34:59.938 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-09.21:34:59.946 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-09.21:35:00.027 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50 ms. Found 0 Redis repository interfaces.
+24-07-09.21:35:04.416 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-09.21:35:05.494 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.21:35:05.528 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-09.21:35:10.641 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-09.21:35:10.832 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 14.932 seconds (JVM running for 18.655)
+24-07-09.21:35:12.753 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-09.21:35:15.298 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-09.21:35:15.505 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.21:35:15.526 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.21:35:15.540 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-09.21:35:15.638 [main            ] INFO  RuleLockLogicFilter    - 规则过滤-次数锁 userId:xiaofuge strategyId:10003 ruleModel:rule_lock
+24-07-09.21:35:15.752 [main            ] INFO  DefaultRaffleStrategy  - 抽奖中规则过滤 userId: xiaofuge ruleModel: rule_lock code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
+24-07-09.21:35:15.752 [main            ] INFO  AbstractRaffleStrategy - 【临时日志】中奖中规则拦截，通过抽奖后规则 rule_luck_award 走兜底奖励。
+24-07-09.21:35:16.796 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":10003,"userId":"xiaofuge"}
+24-07-09.21:35:16.812 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardDesc":"中奖中规则拦截，通过抽奖后规则 rule_luck_award 走兜底奖励。"}
+24-07-09.21:35:16.948 [redisson-netty-2-3] ERROR ErrorsLoggingHandler   - Exception occured. Channel: [id: 0x20bc31c8, L:/127.0.0.1:50101 - R:127.0.0.1/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
 	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
 	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
@@ -156,278 +204,5 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.lang.Thread.run(Thread.java:748)
-24-07-07.17:19:45.690 [main            ] ERROR TestContextManager     - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@69453e37] to prepare test instance [org.example.test.domain.RaffleStrategyTest@7cfb0c4c]
-java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:98)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:248)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
-	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
-	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
-	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
-	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyArmoryDispatch': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [org/example/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:136)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:141)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:90)
-	... 27 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'strategyRepository': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [org/example/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
-	... 43 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonService': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [org/example/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:544)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
-	... 59 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonClient' defined in class path resource [org/example/config/RedisClientConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.resolveBeanByName(AbstractAutowireCapableBeanFactory.java:479)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:550)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:520)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:673)
-	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:228)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
-	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:329)
-	... 75 common frames omitted
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.api.RedissonClient]: Factory method 'redissonClient' threw exception; nested exception is org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
-	... 91 common frames omitted
-Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: 127.0.0.1/127.0.0.1:6379
-	at org.redisson.connection.pool.ConnectionPool.lambda$createConnection$0(ConnectionPool.java:132)
-	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
-	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750)
-	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
-	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
-	at org.redisson.connection.pool.ConnectionPool.promiseFailure(ConnectionPool.java:294)
-	at org.redisson.connection.pool.ConnectionPool.lambda$createConnection$6(ConnectionPool.java:253)
-	at java.util.concurrent.CompletableFuture.uniWhenComplete(CompletableFuture.java:774)
-	at java.util.concurrent.CompletableFuture$UniWhenComplete.tryFire(CompletableFuture.java:750)
-	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:488)
-	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:1990)
-	at org.redisson.client.RedisClient$1$2.run(RedisClient.java:257)
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
-	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
-	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.lang.Thread.run(Thread.java:748)
-Caused by: java.util.concurrent.CompletionException: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: 127.0.0.1/127.0.0.1:6379
-	at java.util.concurrent.CompletableFuture.encodeRelay(CompletableFuture.java:326)
-	at java.util.concurrent.CompletableFuture.completeRelay(CompletableFuture.java:338)
-	at java.util.concurrent.CompletableFuture.uniRelay(CompletableFuture.java:925)
-	at java.util.concurrent.CompletableFuture$UniRelay.tryFire(CompletableFuture.java:913)
-	... 11 common frames omitted
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: 127.0.0.1/127.0.0.1:6379
-Caused by: java.net.ConnectException: Connection refused: no further information
-	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
-	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.lang.Thread.run(Thread.java:748)
-24-07-07.17:21:00.774 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 19736 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-07.17:21:00.777 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-07.17:21:05.181 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-07.17:21:05.193 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-07.17:21:05.331 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 0 Redis repository interfaces.
-24-07-07.17:21:12.243 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-07.17:21:13.601 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:21:13.630 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:21:20.137 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-07.17:21:20.522 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 22.08 seconds (JVM running for 27.496)
-24-07-07.17:21:23.104 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-07.17:21:25.816 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-07.17:21:26.281 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-07.17:21:26.341 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-07.17:25:52.158 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 10836 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-07.17:25:52.164 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-07.17:25:58.102 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-07.17:25:58.121 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-07.17:25:58.283 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 83 ms. Found 0 Redis repository interfaces.
-24-07-07.17:26:07.340 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-07.17:26:09.864 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:26:09.948 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:26:19.296 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-07.17:26:19.616 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 30.34 seconds (JVM running for 35.156)
-24-07-07.17:26:21.875 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-07.17:26:24.941 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-07.17:26:25.791 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-07.17:26:25.856 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-07.17:27:01.235 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 22940 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-07.17:27:01.238 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-07.17:27:04.247 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-07.17:27:04.254 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-07.17:27:04.350 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 0 Redis repository interfaces.
-24-07-07.17:27:09.861 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-07.17:27:11.288 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:27:11.320 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:27:17.949 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-07.17:27:18.241 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 18.374 seconds (JVM running for 22.303)
-24-07-07.17:27:20.017 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:xiaofuge strategyId:10001 ruleModel:rule_blacklist
-24-07-07.17:27:20.167 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-07.17:27:22.244 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-07.17:27:22.587 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-07.17:27:22.612 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-07.17:31:52.157 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 5624 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-07.17:31:52.159 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-07.17:31:55.126 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-07.17:31:55.137 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-07.17:31:55.247 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 0 Redis repository interfaces.
-24-07-07.17:32:00.412 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-07.17:32:02.036 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:32:02.067 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:32:09.025 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-07.17:32:09.320 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 18.134 seconds (JVM running for 20.782)
-24-07-07.17:32:11.160 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:xiaofuge strategyId:10001 ruleModel:rule_blacklist
-24-07-07.17:33:28.765 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 20280 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-07.17:33:28.769 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-07.17:33:33.459 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-07.17:33:33.478 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-07.17:33:33.650 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 100 ms. Found 0 Redis repository interfaces.
-24-07-07.17:33:40.438 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-07.17:33:42.207 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:33:42.266 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:33:48.061 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-07.17:33:48.311 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 22.222 seconds (JVM running for 26.621)
-24-07-07.17:33:49.965 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:xiaofuge strategyId:10001 ruleModel:rule_blacklist
-24-07-07.17:33:50.104 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-07.17:33:51.944 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-07.17:33:52.203 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-07.17:33:52.294 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-07.17:36:54.010 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 3856 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-07.17:36:54.014 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-07.17:36:58.821 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-07.17:36:58.837 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-07.17:36:58.991 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 0 Redis repository interfaces.
-24-07-07.17:37:07.575 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-07.17:37:09.933 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:37:09.989 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:37:22.482 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-07.17:37:22.847 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 31.097 seconds (JVM running for 36.138)
-24-07-07.17:37:24.482 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:xiaofuge strategyId:10001 ruleModel:rule_blacklist
-24-07-07.17:37:24.631 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-07.17:37:27.105 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-07.17:37:27.284 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:xiaofuge strategyId:10001 ruleModel:rule_weight
-24-07-07.17:37:27.294 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: xiaofuge ruleModel: rule_weight code: 0001 info: 接管；后续的流程，受规则引擎执行结果影响
-24-07-07.17:37:28.174 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":10001,"userId":"xiaofuge"}
-24-07-07.17:37:28.189 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":102}
-24-07-07.17:37:28.317 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-07.17:37:28.346 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-07.17:39:16.803 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 6808 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-07.17:39:16.806 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-07.17:39:20.018 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-07.17:39:20.027 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-07.17:39:20.137 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 0 Redis repository interfaces.
-24-07-07.17:39:27.312 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-07.17:39:29.200 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:39:29.253 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:39:39.352 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-07.17:39:39.759 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 24.131 seconds (JVM running for 26.782)
-24-07-07.17:39:42.236 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:xiaofuge strategyId:10001 ruleModel:rule_blacklist
-24-07-07.17:39:42.487 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-07.17:39:45.628 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-07.17:39:45.798 [main            ] INFO  RuleWeightLogicFilter  - 规则过滤-权重范围 userId:xiaofuge strategyId:10001 ruleModel:rule_weight
-24-07-07.17:39:45.804 [main            ] INFO  DefaultRaffleStrategy  - 抽奖前规则过滤 userId: xiaofuge ruleModel: rule_weight code: 0000 info: 放行；执行后续的流程，不受规则引擎影响
-24-07-07.17:39:46.623 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":10001,"userId":"xiaofuge"}
-24-07-07.17:39:46.636 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":102}
-24-07-07.17:39:46.803 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-07.17:39:46.853 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-07.17:40:07.419 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 22728 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-07.17:40:07.423 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-07.17:40:11.503 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-07.17:40:11.517 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-07.17:40:11.677 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 99 ms. Found 0 Redis repository interfaces.
-24-07-07.17:40:18.251 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-07.17:40:20.093 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:40:20.159 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-07.17:40:32.637 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-07.17:40:33.117 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 27.438 seconds (JVM running for 31.454)
-24-07-07.17:40:36.989 [main            ] INFO  RuleBlackListLogicFilter - 规则过滤-黑名单 userId:user003 strategyId:10001 ruleModel:rule_blacklist
-24-07-07.17:40:37.258 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-07.17:40:40.253 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-07.17:40:41.213 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":10001,"userId":"user003"}
-24-07-07.17:40:41.225 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardId":100}
-24-07-07.17:40:41.339 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-07.17:40:41.380 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-09.21:35:17.020 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-09.21:35:17.065 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
