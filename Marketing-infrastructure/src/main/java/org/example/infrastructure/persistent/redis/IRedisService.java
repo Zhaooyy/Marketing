@@ -226,4 +226,9 @@ public interface IRedisService {
 
     RMap getMap(String key);
 
+    Long getAtomicLong(String key);
+
+    void setAtomicLong(String key, Integer value);
+
+    boolean setNx(String lockKey);
 }

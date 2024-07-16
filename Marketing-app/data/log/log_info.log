@@ -1,166 +1,103 @@
-24-07-14.16:23:01.919 [main            ] INFO  StrategyRepositoryTest - Starting StrategyRepositoryTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 19052 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-14.16:23:01.924 [main            ] INFO  StrategyRepositoryTest - The following 1 profile is active: "dev"
-24-07-14.16:23:06.555 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-14.16:23:06.571 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-14.16:23:06.745 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 112 ms. Found 0 Redis repository interfaces.
-24-07-14.16:23:16.039 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-14.16:23:18.271 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.16:23:18.338 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.16:23:29.123 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-14.16:23:29.489 [main            ] INFO  StrategyRepositoryTest - Started StrategyRepositoryTest in 29.312 seconds (JVM running for 34.187)
-24-07-14.16:23:31.356 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-14.16:23:33.412 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-14.16:23:34.556 [main            ] INFO  StrategyRepositoryTest - 测试结果：{"treeDesc":"规则树","treeId":"tree_lock","treeName":"规则树","treeNodeMap":{"rule_lock":{"ruleDesc":"限定用户已完成N次抽奖后解锁","ruleKey":"rule_lock","ruleValue":"1","treeId":"tree_lock","treeNodeLineVOList":[{"ruleLimitType":"EQUAL","ruleLimitValue":"ALLOW","ruleNodeFrom":"rule_lock","ruleNodeTo":"rule_stock","treeId":"tree_lock"},{"ruleLimitType":"EQUAL","ruleLimitValue":"TAKE_OVER","ruleNodeFrom":"rule_lock","ruleNodeTo":"rule_luch_award","treeId":"tree_lock"}]},"rule_stock":{"ruleDesc":"库存扣减规则","ruleKey":"rule_stock","ruleValue":"","treeId":"tree_lock","treeNodeLineVOList":[{"ruleLimitType":"EQUAL","ruleLimitValue":"TAKE_OVER","ruleNodeFrom":"rule_stock","ruleNodeTo":"rule_luch_award","treeId":"tree_lock"}]},"rule_luck_award":{"ruleDesc":"兜底奖品随机积分","ruleKey":"rule_luck_award","ruleValue":"1,100","treeId":"tree_lock"}},"treeRootRuleNode":"rule_lock"}
-24-07-14.16:23:34.735 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-14.16:23:34.778 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-14.17:27:47.250 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 916 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-14.17:27:47.253 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-14.17:27:51.039 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-14.17:27:51.048 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-14.17:27:51.171 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 0 Redis repository interfaces.
-24-07-14.17:27:57.074 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-14.17:27:58.488 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.17:27:58.518 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.17:28:04.733 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-14.17:28:05.002 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 19.341 seconds (JVM running for 22.858)
-24-07-14.17:28:07.200 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-14.17:28:10.245 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-14.17:28:10.493 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-07-14.17:28:10.615 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-07-14.17:28:10.643 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: zyy strategyId: 10006 ruleModel: rule_default awardId: 102
-24-07-14.17:28:10.648 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 zyy 10006 102 rule_default
-24-07-14.17:28:10.750 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
-24-07-14.17:28:10.755 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
-24-07-14.17:28:11.137 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-14.17:28:11.169 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-14.17:30:43.641 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 6660 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-14.17:30:43.643 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-14.17:30:46.800 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-14.17:30:46.814 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-14.17:30:46.977 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 104 ms. Found 0 Redis repository interfaces.
-24-07-14.17:30:52.936 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-14.17:30:54.598 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.17:30:54.640 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.17:31:01.613 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-14.17:31:01.883 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 19.659 seconds (JVM running for 24.961)
-24-07-14.17:31:03.484 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-14.17:31:05.716 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-14.17:31:05.866 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-07-14.17:31:05.882 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-07-14.17:31:05.906 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: zyy strategyId: 10006 ruleModel: rule_default awardId: 102
-24-07-14.17:31:05.910 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 zyy 10006 102 rule_default
-24-07-14.17:32:15.164 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m9s339ms632µs900ns).
-24-07-14.17:32:29.250 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
-24-07-14.17:32:39.721 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
-24-07-14.17:33:59.466 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m44s303ms910µs900ns).
-24-07-14.17:33:59.644 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-14.17:33:59.715 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-14.17:34:10.011 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 3212 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-14.17:34:10.015 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-14.17:34:13.305 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-14.17:34:13.317 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-14.17:34:13.468 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95 ms. Found 0 Redis repository interfaces.
-24-07-14.17:34:18.429 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-14.17:34:19.582 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.17:34:19.607 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.17:34:24.944 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-14.17:34:25.148 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 16.581 seconds (JVM running for 20.744)
-24-07-14.17:34:26.289 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-14.17:34:27.993 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-14.17:34:28.123 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-07-14.17:34:28.135 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-07-14.17:34:28.162 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: zyy strategyId: 10006 ruleModel: rule_default awardId: 102
-24-07-14.17:34:28.165 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 zyy 10006 102 rule_default
-24-07-14.17:34:41.745 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
-24-07-14.17:34:41.749 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
-24-07-14.17:34:41.918 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-14.17:34:41.934 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-14.17:34:48.659 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 17852 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-14.17:34:48.661 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-14.17:34:50.997 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-14.17:34:51.005 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-14.17:34:51.092 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 0 Redis repository interfaces.
-24-07-14.17:34:55.382 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-14.17:34:56.315 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.17:34:56.335 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.17:35:00.374 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-14.17:35:00.570 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 12.867 seconds (JVM running for 15.333)
-24-07-14.17:35:01.800 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-14.17:35:03.226 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-14.17:35:03.338 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-07-14.17:35:03.363 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-07-14.17:35:03.396 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: zyy strategyId: 10006 ruleModel: rule_default awardId: 102
-24-07-14.17:35:03.400 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 zyy 10006 102 rule_default
-24-07-14.17:35:03.458 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
-24-07-14.17:35:03.460 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
-24-07-14.17:35:03.575 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-14.17:35:03.614 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-14.17:36:01.764 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 9476 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-14.17:36:01.768 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-14.17:36:04.984 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-14.17:36:04.995 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-14.17:36:05.108 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 0 Redis repository interfaces.
-24-07-14.17:36:10.676 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-14.17:36:12.387 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.17:36:12.430 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.17:36:19.435 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-14.17:36:19.694 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 19.471 seconds (JVM running for 25.023)
-24-07-14.17:36:21.257 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-14.17:36:23.291 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-14.17:36:23.441 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-07-14.17:36:23.450 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-07-14.17:36:23.489 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: zyy strategyId: 10006 ruleModel: rule_default awardId: 102
-24-07-14.17:36:23.494 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 zyy 10006 102 rule_default
-24-07-14.17:36:45.592 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
-24-07-14.17:36:59.277 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
-24-07-14.17:37:56.422 [HikariPool-1 housekeeper] WARN  HikariPool             - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s875ms17µs400ns).
-24-07-14.17:37:56.599 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-14.17:37:56.632 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-14.17:38:09.456 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 10020 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-14.17:38:09.459 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-14.17:38:12.620 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-14.17:38:12.635 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-14.17:38:12.791 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 103 ms. Found 0 Redis repository interfaces.
-24-07-14.17:38:18.529 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-14.17:38:20.120 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.17:38:20.159 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.17:38:26.974 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-14.17:38:27.277 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 19.263 seconds (JVM running for 22.895)
-24-07-14.17:38:29.744 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-14.17:38:32.158 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-14.17:38:32.338 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-07-14.17:38:32.357 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-07-14.17:38:32.389 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: zyy strategyId: 10006 ruleModel: rule_default awardId: 102
-24-07-14.17:38:32.394 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 zyy 10006 102 rule_default
-24-07-14.17:38:32.574 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
-24-07-14.17:38:32.576 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
-24-07-14.17:38:32.579 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_luck_award code:0001
-24-07-14.17:38:32.580 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 zyy 10006 101 1,100
-24-07-14.17:38:33.277 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":10006,"userId":"zyy"}
-24-07-14.17:38:33.290 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardConfig":"1,100","awardId":101}
-24-07-14.17:38:33.441 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-14.17:38:33.484 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
-24-07-14.17:43:16.367 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 19024 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
-24-07-14.17:43:16.372 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
-24-07-14.17:43:19.574 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-24-07-14.17:43:19.586 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-24-07-14.17:43:19.700 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 71 ms. Found 0 Redis repository interfaces.
-24-07-14.17:43:24.423 [main            ] INFO  Version                - Redisson 3.23.4
-24-07-14.17:43:25.893 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.17:43:25.946 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
-24-07-14.17:43:31.985 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
-24-07-14.17:43:32.263 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 17.656 seconds (JVM running for 21.379)
-24-07-14.17:43:34.095 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
-24-07-14.17:43:36.087 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-07-14.17:43:36.216 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-07-14.17:43:36.230 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
-24-07-14.17:43:36.253 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: zyy strategyId: 10006 ruleModel: rule_default awardId: 102
-24-07-14.17:43:36.256 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 zyy 10006 102 rule_default
-24-07-14.17:43:36.362 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
-24-07-14.17:43:36.367 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
-24-07-14.17:43:36.371 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_luck_award code:0001
-24-07-14.17:43:36.371 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 zyy 10006 101 1,100
-24-07-14.17:43:36.994 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":10006,"userId":"zyy"}
-24-07-14.17:43:37.003 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardConfig":"1,100","awardId":101}
-24-07-14.17:43:37.140 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
-24-07-14.17:43:37.162 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-16.20:12:16.240 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 19012 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
+24-07-16.20:12:16.246 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-07-16.20:12:20.423 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.20:12:20.439 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.20:12:20.618 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 111 ms. Found 0 Redis repository interfaces.
+24-07-16.20:12:26.153 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.20:12:27.360 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-16.20:12:27.388 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-16.20:12:33.832 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.20:12:34.111 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 19.921 seconds (JVM running for 24.713)
+24-07-16.20:12:35.004 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:12:35.762 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-16.20:12:38.111 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-16.20:12:38.595 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-16.20:12:38.675 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: zyy strategyId: 10006 ruleModel: rule_default awardId: 102
+24-07-16.20:12:38.678 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 zyy 10006 102 rule_default
+24-07-16.20:12:38.809 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+24-07-16.20:12:38.812 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:zyy strategyId:10006 awardId:102
+24-07-16.20:12:38.820 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0000
+24-07-16.20:12:38.946 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-16.20:12:38.968 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-07-16.20:19:53.330 [main            ] INFO  RaffleStrategyTest     - Starting RaffleStrategyTest using Java 1.8.0_291 on LAPTOP-4QND36CL with PID 7692 (started by Thinkpad in D:\idea\program\Marketing\Marketing-app)
+24-07-16.20:19:53.333 [main            ] INFO  RaffleStrategyTest     - The following 1 profile is active: "dev"
+24-07-16.20:19:56.214 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-07-16.20:19:56.228 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-07-16.20:19:56.346 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 69 ms. Found 0 Redis repository interfaces.
+24-07-16.20:20:01.152 [main            ] INFO  Version                - Redisson 3.23.4
+24-07-16.20:20:02.278 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-16.20:20:02.308 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 127.0.0.1/127.0.0.1:6379
+24-07-16.20:20:07.670 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-07-16.20:20:07.918 [main            ] INFO  RaffleStrategyTest     - Started RaffleStrategyTest in 15.837 seconds (JVM running for 20.193)
+24-07-16.20:20:09.525 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-07-16.20:20:10.005 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:20:11.482 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-07-16.20:20:11.793 [main            ] INFO  RaffleStrategyTest     - 测试结果：true
+24-07-16.20:20:11.880 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: zyy strategyId: 10006 ruleModel: rule_default awardId: 102
+24-07-16.20:20:11.883 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 zyy 10006 102 rule_default
+24-07-16.20:20:11.967 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+24-07-16.20:20:11.970 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:zyy strategyId:10006 awardId:102
+24-07-16.20:20:12.067 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
+24-07-16.20:20:12.067 [main            ] INFO  RuleLuckAwardLogicTreeNode - 规则过滤-兜底奖品 userId:zyy strategyId:10006 awardId:102 ruleValue:101:1,100
+24-07-16.20:20:12.068 [main            ] INFO  RuleLuckAwardLogicTreeNode - 规则过滤-兜底奖品 userId:zyy strategyId:10006 awardId:101 awardRuleValue:1,100
+24-07-16.20:20:12.069 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_luck_award code:0001
+24-07-16.20:20:12.070 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 zyy 10006 101 1,100
+24-07-16.20:20:12.759 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":10006,"userId":"zyy"}
+24-07-16.20:20:12.772 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardConfig":"1,100","awardId":101}
+24-07-16.20:20:12.780 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: zyy strategyId: 10006 ruleModel: rule_default awardId: 102
+24-07-16.20:20:12.781 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 zyy 10006 102 rule_default
+24-07-16.20:20:12.831 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+24-07-16.20:20:12.832 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:zyy strategyId:10006 awardId:102
+24-07-16.20:20:12.841 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
+24-07-16.20:20:12.842 [main            ] INFO  RuleLuckAwardLogicTreeNode - 规则过滤-兜底奖品 userId:zyy strategyId:10006 awardId:102 ruleValue:101:1,100
+24-07-16.20:20:12.842 [main            ] INFO  RuleLuckAwardLogicTreeNode - 规则过滤-兜底奖品 userId:zyy strategyId:10006 awardId:101 awardRuleValue:1,100
+24-07-16.20:20:12.842 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_luck_award code:0001
+24-07-16.20:20:12.842 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 zyy 10006 101 1,100
+24-07-16.20:20:12.843 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":10006,"userId":"zyy"}
+24-07-16.20:20:12.843 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardConfig":"1,100","awardId":101}
+24-07-16.20:20:12.851 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: zyy strategyId: 10006 ruleModel: rule_default awardId: 102
+24-07-16.20:20:12.852 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 zyy 10006 102 rule_default
+24-07-16.20:20:12.859 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_lock code:0000
+24-07-16.20:20:12.859 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:zyy strategyId:10006 awardId:102
+24-07-16.20:20:12.869 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_stock code:0001
+24-07-16.20:20:12.875 [main            ] INFO  RuleLuckAwardLogicTreeNode - 规则过滤-兜底奖品 userId:zyy strategyId:10006 awardId:102 ruleValue:101:1,100
+24-07-16.20:20:12.875 [main            ] INFO  RuleLuckAwardLogicTreeNode - 规则过滤-兜底奖品 userId:zyy strategyId:10006 awardId:101 awardRuleValue:1,100
+24-07-16.20:20:12.876 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock node:rule_luck_award code:0001
+24-07-16.20:20:12.876 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 zyy 10006 101 1,100
+24-07-16.20:20:12.876 [main            ] INFO  RaffleStrategyTest     - 请求参数：{"strategyId":10006,"userId":"zyy"}
+24-07-16.20:20:12.876 [main            ] INFO  RaffleStrategyTest     - 测试结果：{"awardConfig":"1,100","awardId":101}
+24-07-16.20:20:15.005 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:20:20.015 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:20:25.005 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:20:30.014 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:20:35.013 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:20:40.002 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:20:45.015 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:20:50.016 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:20:55.013 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:21:00.009 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:21:05.012 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:21:10.016 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:21:15.012 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:21:20.014 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:21:25.014 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:21:30.012 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:21:35.007 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:21:40.001 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:21:45.001 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:21:50.000 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:21:55.006 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:22:00.005 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:22:05.007 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:22:10.012 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:22:15.010 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:22:20.015 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:22:25.013 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:22:30.005 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:22:35.006 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:22:40.008 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:22:45.014 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:22:50.013 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:22:55.009 [scheduling-1    ] INFO  UpdateAwardStockJob    - 定时任务，更新奖品消耗库存【延迟队列获取，降低对数据库的更新频次，不要产生竞争】
+24-07-16.20:22:59.609 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-07-16.20:22:59.632 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
