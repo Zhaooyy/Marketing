@@ -46,11 +46,11 @@ public class RaffleStrategyTest {
         ReflectionTestUtils.setField(ruleWeightLogicFilter, "userScore", 4050L);
         ReflectionTestUtils.setField(ruleLockLogicTreeNode, "userRaffleCount", 10L);
 
-
     }
 
     @Test
     public void test_performRaffle() throws InterruptedException {
+        log.info("Before结束！");
         for(int i=0; i<3; i++){
             RaffleFactorEntity raffleFactorEntity = RaffleFactorEntity.builder()
                     .userId("zyy")
